@@ -1,162 +1,112 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import React from 'react'
+import "../assets/css/header.css"
+import logo from "../assets/img/logo_nits.png"
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const navItems = [
+  {
+    pathname: "/",
+    name: "Home",
+  },
+  {
+    pathname: "/about",
+    name: "About Laboratory",
+  },
+  {
+    pathname: "/listOfEquipments",
+    name: "List of Equipments",
+  },
+  {
+    pathname: "/listOfExperiments",
+    name: "List of Experiments",
+  },
+  {
+    pathname: "/team",
+    name: "Team",
+  },
+  {
+    pathname: "/contact-us",
+    name: "Contact us",
+  },
+]
 
-const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+const Header = () => {
+  const [isScrolled, setScrolled] = React.useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const handleScroll = () => {
+    if (window.scrollY > 80) setScrolled(true);
+    else setScrolled(false);
+  }
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, [])
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+    <>
+    <div className="header">
+      <nav className={isScrolled ? "moved nav-bar" : "nav-bar"}>
+        <div className="logo">
+          <img src={logo} alt="" className="nit-logo" />
+        </div>
+        <div className="links">
+        {
+            navItems.map((item, i) => 
+            (item.subItems && item.subItems.length > 0 ) ? (
+              <div key={i} >
+                  <a className="nav-btn">{item.name}</a>
+                
+              </div>
+            ) : 
+            (
+              <div key={i} className={item.pathname == window.location.pathname ? "nav-btn-box active-btn" : "nav-btn-box"}>
+                <a href={item.pathname==="/about" ? "/#about" : item.pathname} className="nav-btn">{item.name}</a>
+              </div>
+            ))
+          }
+        </div>
+      </nav>
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+              <ul id="menu">
+                {navItems.map((item, i) => (
+                  <li key={i}>
+                    <a href={item.pathname==="/about" ? "/#about" : item.pathname}>{item.name}</a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </nav>
+      <div>
+      <div className="content-container">
+        <div className="heading">
+          ENERGY SYSTEMS LAB
+        </div>
+        
+        <div className="organised-by">
+           by <br /> Department of Electronics and Instrumentation
+          Engineering
+        </div>
+        <div className="logo2 log-15x mt-2">
+            <img src={logo} alt="" className="nit-logo" />
+          </div>
+        <div className="college-name mt-1">
+          NATIONAL INSTITUTE OF TECHNOLOGY SILCHAR <br />
+          (Assam, India)
+        </div>
+        
+      </div>
+      </div>
+  </div>
+  <div>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+  {/* mobile nav */}
+  </div>
+</>
+  )
+}
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
-export default Navbar;
+export default Header
