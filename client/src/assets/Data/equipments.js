@@ -12,35 +12,54 @@ const EquipmentData=[
         image:""
     },
     {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
+        name: "Battery Life Cycle Tester",
+        makersName:"Bitrode",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
         image:""
     },
     {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
+        name: "Servo controlled Voltage Stabilizer",
+        makersName:"OPTO Equipments",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
         image:""
     },
     {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
+        name: "Uni and Bi Directional DC-DC Converters",
+        makersName:"Calstat Power Pvt Ltd",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
         image:""
     },
     {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
+        name: "dSPACE MicroLabBox",
+        makersName:"dSPACE",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
         image:""
     },
     {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
+        name: "DC Programmable Power Supply with Solar Array Simulator",
+        makersName:"Chroma",
+        specifications:"Output Voltage: 0-150 Volt,Output Current: 0-40 Amp,Output Power: 2 KW",
         image:""
     },
+    {
+        name: "DC Motor Generator Set",
+        makersName:"BENN Electricals",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
+        image:""
+    },
+    {
+        name: "Loading Rheostat 1 Phase",
+        makersName:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
+        image:""
+    },
+    {
+        name: "Variac",
+        makersName:"Automatic Electric Ltd",
+        specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
+        image:""
+    },
+    
 ]
 
 export default EquipmentData;

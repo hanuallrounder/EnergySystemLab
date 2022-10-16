@@ -6,26 +6,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import nits from "../assets/img/nits.jpg"
-export default function EquipmentCard() {
+export default function EquipmentCard({item}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
         image={nits}
-        alt="green iguana"
+        alt=""
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-        Impedance Analyser cum Electrochemical Workstation
+        {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
             <strong>Specifications</strong>
             <br/>
-        Frequency range: 10μHz to 12MHz,
-        voltage range of potentiometer: ±5V,
-        current range of galvanometer: ±1nA to ±4A.,
-        voltage and current measurement accuracy: ±50μV ±5ppm of reading and 0.005% of FS ±0.1% of reading respectively.
+            {item.specifications}
         </Typography>
       </CardContent>
       <CardActions>

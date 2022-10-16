@@ -19,7 +19,7 @@ const LlistOfEquipments = () => {
     <Navbar />
     <Typography variant="h4" m={4} component="h4" style={ {color:"white"}}>List of Equipments</Typography>
     <div className="container">
-    {equipmentData.map((item,i) =>  <div key={i}> <EquipmentCard /></div>)}
+    {equipmentData.map((item,i) =>  <div key={i}> <EquipmentCard item={item} /></div>)}
     </div>
     </ div> 
     );
