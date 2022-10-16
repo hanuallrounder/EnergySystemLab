@@ -17,8 +17,8 @@ const navItems = [
     name: "List of Equipments",
   },
   {
-    pathname: "/listOfExperiments",
-    name: "List of Experiments",
+    pathname: "/listOfProjects",
+    name: "List of Projects",
   },
   {
     pathname: "/team",

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import Navbar from "../components/Navbar"
-const ListOfExperiments = () => {
+const ListOfProjects = () => {
     return (
     <>
     <Navbar />
@@ -9,4 +9,4 @@ const ListOfExperiments = () => {
     );
 };
 
-export default ListOfExperiments;
+export default ListOfProjects;
