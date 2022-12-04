@@ -88,7 +88,7 @@ const Header = () => {
         </div>
         
         <div className="organised-by">
-           by <br /> Department of Electronics and Instrumentation
+           <br /> Department of Electronics and Instrumentation
           Engineering
         </div>
         <div className="logo2 log-15x mt-2">
