@@ -6,27 +6,27 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function TeamCard() {
+
+export default function TeamCard({data}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
+    <Card sx={{ maxWidth: 345 , marginBottom:"2rem" }}>
+      {/* <CardMedia
         component="img"
         height="200"
         image="https://picsum.photos/seed/picsum/200/300"
         alt="green iguana"
-      />
+      /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {data.name}
+          <Typography variant="body2">B.Tech - {data.id}  </Typography>
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        <Typography variant="body2" color="text.secondary"> Electronics and Instrumentation Engineering</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Github</Button>
+        <Button size="small">LinkedIn</Button>
+        <Button size="small">Contact</Button>
       </CardActions>
     </Card>
   );

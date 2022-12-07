@@ -1,7 +1,7 @@
 import React from 'react'
 import "../assets/css/header.css"
 import logo from "../assets/img/logo_nits.png"
-import logo_white from "../assets/img/logo_white.png"
+
 
 const navItems = [
   {
@@ -9,7 +9,7 @@ const navItems = [
     name: "Home",
   },
   {
-    pathname: "/about",
+    pathname: "#about",
     name: "About Laboratory",
   },
   {
@@ -92,8 +92,9 @@ const Header = () => {
           Engineering
         </div>
         <div className="logo2 log-15x mt-2">
-            <img src={logo} alt="" className="nit-logo" />
+            {/* <img src={logo} alt="" className="nit-logo" /> */}
           </div>
+          <br />
         <div className="college-name mt-1">
           NATIONAL INSTITUTE OF TECHNOLOGY SILCHAR <br />
           (Assam, India)

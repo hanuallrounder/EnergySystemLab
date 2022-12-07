@@ -5,12 +5,7 @@ const EquipmentData=[
         specifications:"Frequency range: 10μHz to 12MHz,voltage range of potentiometer: ±5V,current range of galvanometer: ±1nA to ±4A.,voltage and current measurement accuracy: ±50μV ±5ppm of reading and 0.005% of FS ±0.1% of reading respectively",
         image:""
     },
-    {
-        name: "Climate Chamber",
-        makersName:"SR Lab Instruments",
-        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
-        image:""
-    },
+    
     {
         name: "Battery Life Cycle Tester",
         makersName:"Bitrode",
@@ -57,6 +52,12 @@ const EquipmentData=[
         name: "Variac",
         makersName:"Automatic Electric Ltd",
         specifications:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor malesuada dolor non rutrum. Donec eget luctus velit, sit amet rutrum urna. Phasellus nec rhoncus velit, porttitor lacinia quam. Nulla sit amet erat ultricies, tincidunt odio ac, rhoncus ",
+        image:""
+    },
+    {
+        name: "Climate Chamber",
+        makersName:"SR Lab Instruments",
+        specifications:"Temperature Range: -600C to +1800C,Humidity Range:",
         image:""
     },
     

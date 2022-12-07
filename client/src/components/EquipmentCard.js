@@ -9,12 +9,12 @@ import nits from "../assets/img/nits.jpg"
 export default function EquipmentCard({item}) {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
+      {/* <CardMedia
         component="img"
         height="140"
         image={nits}
         alt=""
-      />
+      /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
         {item.name}

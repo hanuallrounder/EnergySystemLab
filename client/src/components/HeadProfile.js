@@ -1,17 +1,12 @@
+import * as React from 'react';
 import {Box,Typography} from '@mui/material';
-import React from "react";
-import Navbar from "../components/Navbar"
-const Contact = () => {
-    return (
+
+export default function HeadProfile() {
+  return (
     <>
-    <Navbar />
-    <Typography variant="h4" component="h5"  style={ {color:"white" , margin:'5% 10%  0 10%'}}> 
-    Contact Details </Typography>
-    <Box component="div" sx={{ p: 4, border: '1px solid grey',height:"60vh", margin:"5rem 0"}}>
     <div style={{display:"flex",flexDirection:"row",justifyContent:"space-evenly" }}>
-        <img src={'https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=5tKH7h0AAAAJ&citpid=1'} style={{height:"400px",width:"300px"}}/>
-        
-        <Box component="span" sx={{ p: 1,  height:"430px" }}>
+        <img src={'https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=5tKH7h0AAAAJ&citpid=1'} style={{height:"300px",width:"250px"}}/>
+        <Box component="span" >
         <Typography variant="h4" component="h5"  style={ {color:"white"}}> Dr. Munmun Khanra</Typography>
         <Typography variant="body1" component="p"  style={ {color:"white"}}> Associate Professor</Typography>
         <br />
@@ -25,19 +20,10 @@ const Contact = () => {
         <Typography variant="body2" component="span"  style={ {color:"white"}}><a href="https://scholar.google.com/citations?user=5tKH7h0AAAAJ&hl=en"> {"    "}    Google Scholar</a> </Typography>
         <br />
         <br />
-        <Typography variant="body1" component="p"  style={ {color:"white"}}> Address:</Typography>
-        <Typography variant="body2" component="p"  style={ {color:"white"}}>
-            Department of EIE</Typography>
-            <Typography variant="body2" component="p"  style={ {color:"white"}}> New Academic Building</Typography>
-            <Typography variant="body2" component="p"  style={ {color:"white"}}> Behind Central Library</Typography>
-            <Typography variant="body2" component="p"  style={ {color:"white"}}>NIT Silchar,</Typography>
-            <Typography variant="body2" component="p"  style={ {color:"white"}}>Silchar,Assam-788010, India.</Typography>
+        <Typography variant='body2' component="p" style={{color:"white"}}> <a href="http://eie.nits.ac.in/munmun/">Academic Profile</a></Typography>
         </Box>
     </div>
-    </Box>
-    
-    </> 
-    );
-};
-
-export default Contact;
+    <Typography variant="h6" component="p"  style={ {color:"white",textJustify: "auto",textAlign: "justify",margin:"2% 0" }}> Dr. Munmun Khanra received her B. Tech. from Vidyasagar University, West Bengal. She received M.Tech degree from Jadavpur University, West Bengal and Ph.D degree from IIT Kharagpur, West Bengal. Dr. Munmun Khanra held position of Assistant Professor in Heritage Institute of Technology, Kolkata from July 2004 to Jan. 2009, after which she joined the Electronics and Instrumentation Engineering Department at NIT Silchar as an Assistant Professor in December 2014. Her research interests include Estimation and Control, Batteries and Supercapacitors, Electric Vehicle, Energy Storage, Energy management, Renewable Energy, Wearable Devices, Fractional Order Systems and Applications.</Typography>
+    </>
+  );
+}
