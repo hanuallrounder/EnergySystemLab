@@ -3,13 +3,14 @@ import "../assets/css/header.css"
 import logo from "../assets/img/logo_nits.png"
 
 
+
 const navItems = [
   {
     pathname: "/",
     name: "Home",
   },
   {
-    pathname: "#about",
+    pathname: "/#about",
     name: "About Laboratory",
   },
   {
@@ -30,6 +31,7 @@ const navItems = [
   },
 ]
 
+
 const Header = () => {
   const [isScrolled, setScrolled] = React.useState(false);
 
@@ -41,6 +43,8 @@ const Header = () => {
   React.useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [])
+ 
+
 
   return (
     <>
@@ -54,13 +58,13 @@ const Header = () => {
             navItems.map((item, i) => 
             (item.subItems && item.subItems.length > 0 ) ? (
               <div key={i} >
-                  <a className="nav-btn">{item.name}</a>
+                  <a className="nav-btn" href={ item.pathname} >{item.name}</a>
                 
               </div>
             ) : 
             (
-              <div key={i} className={item.pathname == window.location.pathname ? "nav-btn-box active-btn" : "nav-btn-box"}>
-                <a href={item.pathname==="/about" ? "/#about" : item.pathname} className="nav-btn">{item.name}</a>
+              <div key={i} className={item.pathname === window.location.pathname ? "nav-btn-box active-btn" : "nav-btn-box"}>
+                <a href={ item.pathname} className="nav-btn"   >{item.name}</a>
               </div>
             ))
           }
@@ -75,7 +79,7 @@ const Header = () => {
               <ul id="menu">
                 {navItems.map((item, i) => (
                   <li key={i}>
-                    <a href={item.pathname==="/about" ? "/#about" : item.pathname}>{item.name}</a>
+                    <a href={ item.pathname } >{item.name}</a>
                   </li>
                 ))}
             </ul>

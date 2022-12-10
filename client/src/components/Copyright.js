@@ -1,12 +1,14 @@
 import React from 'react'
 
 const Copyright = () => {
-  console.log(window.location.pathname)
-  const isHome = window.location.pathname == "/";
   return (
+    <div>
+      <hr/>
     <footer>
-      <p style={{margin: "0 auto", textAlign: "center", fontSize: "13px"}}>Copyright &copy; E2A 2022. All Rights Reserved.</p>
+      <p style={{margin: "1% auto", textAlign: "center", fontSize: "13px",color:"white"}}>Copyright &copy; Energy System Lab NITS 2022. All Rights Reserved.</p>
     </footer>
+    
+    </div>
   )
 }
 

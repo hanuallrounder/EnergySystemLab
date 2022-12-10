@@ -6,7 +6,7 @@ import LlistOfEquipments from './pages/ListOfEquipments';
 import ListOfProjects from './pages/ListOfProjects';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-
+import Copyright from './components/Copyright';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
               <Route exact path='/team' element={<Team />} />
               <Route exact path='/contact-us' element={<Contact />} />
             </Routes>
+            <Copyright />
         </Router>
       </Fragment>
   );

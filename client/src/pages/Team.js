@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import Navbar from "../components/Navbar"
 import TeamCard  from "../components/TeamCard";
 import HeadProfile from "../components/HeadProfile";
@@ -53,16 +54,23 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
 
 const Team = () => {
+  const container = React.useRef(null);
+    const scrollToBottom = () => {
+      container.current.scrollIntoView({ behavior: "smooth" })
+    }
+  
+    useEffect(scrollToBottom, []);
     return (
-    <>
+    <div>
     <Navbar />
+    <div ref={container}></div>
     <Typography variant="h4" component="h5" m={4} style={ {color:"white"}}> 
     Laboratory Team </Typography>
-    <div style={{height:'100vh', margin:" 5% 10%"}}>
+    <div style={{margin:" 5% 10%"}}>
     <Typography variant="h6" component="h6" style={ {color:"white", marginBottom:"2%",}}> 
     Faculty Incharge </Typography>
     <HeadProfile />
-//PHD Table
+{/* PHD Table */}
 <Typography variant="h6" component="h6" style={ {color:"white", marginBottom:"2%",}}> 
     Ph.D Scholars </Typography>
 <TableContainer component={Paper} >
@@ -91,17 +99,20 @@ const Team = () => {
     </TableContainer>
 <br />
 <br />
-// Developers
+ {/* Developers */}
 <Typography variant="h6" component="h6" style={ {color:"white", marginBottom:"2%",}}> 
 Developers </Typography>
     
-    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-evenly" }}>
+    
+    <Stack
+  direction={{ xs: 'column', sm: 'row' }}
+  justifyContent="space-evenly"
+  spacing={{ xs: 1, sm: 2, md: 4 }}
+>
     {developersData.map((data,i) =>  <div key={i}> <TeamCard data={data} /></div>)}
+    </Stack>
     </div>
-    </div>
-    
-    
-    </> 
+    </div> 
     );
 };
 

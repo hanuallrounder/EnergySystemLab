@@ -1,6 +1,6 @@
 
 import Navbar from "../components/Navbar"
-import * as React from 'react';
+import  React,{useEffect} from 'react';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -41,10 +41,17 @@ const rows = [
 ];
 
 export default function ListOfProjects() {
+  const container = React.useRef(null);
+    const scrollToBottom = () => {
+      container.current.scrollIntoView({ behavior: "smooth" })
+    }
+  
+    useEffect(scrollToBottom, []);
   return (
     <div >
     <Navbar />
-    <div style={{height:'100vh', margin:" 0 10%"}}>
+    <div ref={container}></div>
+    <div style={{height:'100vh', margin:" 0 10%"}} >
     <TableContainer component={Paper} >
       <Table sx={{ minWidth: 500 }} aria-label="customized table">
         <TableHead>
